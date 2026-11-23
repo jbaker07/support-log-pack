@@ -53,7 +53,7 @@ done < <(find "$ROOT" -type f -name '*.txt' -print0)
 # --- Manifest
 log "Writing manifest"
 {
-  echo "Collected at: ${DTS}Z"
+  echo "Collected at: ${DTS}"
   echo "Host: $(hostname)"
   echo "Files:"; find "$ROOT" -type f | sed "s#${ROOT}/#  - #"
 } >"$ROOT/MANIFEST.txt"
