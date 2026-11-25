@@ -1,0 +1,17 @@
+ipv4: <REDACTED_IP> and <REDACTED_IP>
+email: <REDACTED_EMAIL>
+mac with colons: <REDACTED_MAC>
+mac with dashes: <REDACTED_MAC>
+dhcpv6 duid: <REDACTED_MAC>
+ipv6 full: <REDACTED_IP6>
+ipv6 compressed: <REDACTED_IP6>
+ipv6 link local: <REDACTED_IP6>%en0
+ipv6 loopback: <REDACTED_IP6>
+ipv6 in brackets: [<REDACTED_IP6>]:443
+serial: Serial Number (system): <REDACTED_SERIAL>
+uuid: Hardware UUID: <REDACTED_UUID>
+kept time: 15:11:19.911
+kept code: std::string and Foo::bar
+kept colons: __:::____
+kept version: v1.2.3
+kept unspecified address: local: ::.0

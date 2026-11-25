@@ -1,0 +1,17 @@
+ipv4: 192.168.1.20 and 8.8.8.8
+email: someone@example.com
+mac with colons: a4:83:e7:12:34:56
+mac with dashes: A4-83-E7-12-34-56
+dhcpv6 duid: 00-01-00-01-2C-6A-1B-D4-A4-83-E7-12-34-56
+ipv6 full: 2001:0db8:0000:0000:0000:ff00:0042:8329
+ipv6 compressed: 2001:db8::ff00:42:8329
+ipv6 link local: fe80::1c2b:3cff:fe4d:5e6f%en0
+ipv6 loopback: ::1
+ipv6 in brackets: [2606:4700:10::6814:179a]:443
+serial: Serial Number (system): C02ABC123XYZ
+uuid: Hardware UUID: 12345678-ABCD-1234-ABCD-1234567890AB
+kept time: 15:11:19.911
+kept code: std::string and Foo::bar
+kept colons: __:::____
+kept version: v1.2.3
+kept unspecified address: local: ::.0
