@@ -52,8 +52,8 @@ Both collectors redact every `.txt` file before packaging, with the same rules:
 | MAC addresses with colons or dashes, and longer runs of hex pairs such as a DHCPv6 DUID, which ends in the MAC address | `<REDACTED_MAC>` |
 | This machine's own MAC addresses written as 12 hex digits with no separators, as some event messages print them (for example `0x000D3A123456`) | `<REDACTED_MAC>` |
 | Email addresses | `<REDACTED_EMAIL>` |
-| This machine's host names (`hostname`, `hostname -s`, and on macOS the ComputerName and LocalHostName), also in lower case | `<REDACTED_HOST>` |
-| The user name and full name of the user running the script (and of `SUDO_USER`), which also covers home folder paths | `<REDACTED_USER>` |
+| This machine's host names (`hostname`, `hostname -s`, and on macOS the ComputerName and LocalHostName), matched in any case | `<REDACTED_HOST>` |
+| The user name and full name of the user running the script (and of `SUDO_USER`), matched in any case, which also covers home folder paths | `<REDACTED_USER>` |
 | `Serial Number` lines | `<REDACTED_SERIAL>` |
 | `Hardware UUID` and `Provisioning UDID` lines | `<REDACTED_UUID>` |
 

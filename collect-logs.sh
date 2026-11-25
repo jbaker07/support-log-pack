@@ -73,12 +73,9 @@ build_sed_script() {
       if [[ "$KIND" == host ]]; then TOKEN='<REDACTED_HOST>'; else TOKEN='<REDACTED_USER>'; fi
       collect_names "$KIND" | awk 'length($0) >= 3' | awk '{ print length($0) "\t" $0 }' \
         | sort -rn | cut -f2- | uniq | while IFS= read -r NAME; do
-          echo "s/$(sed_escape "$NAME")/${TOKEN}/g"
-          #lower case copy, since host names often show up in lower case in DNS and logs
-          LOWER_NAME=$(printf '%s' "$NAME" | LC_ALL=C tr '[:upper:]' '[:lower:]')
-          if [[ "$LOWER_NAME" != "$NAME" ]]; then
-            echo "s/$(sed_escape "$LOWER_NAME")/${TOKEN}/g"
-          fi
+          #I makes the match ignore case, since names show up as Runner, runner or RUNNER
+          #in DNS and logs (GNU and BSD sed both read it)
+          echo "s/$(sed_escape "$NAME")/${TOKEN}/gI"
         done
     done
     collect_bare_macs | while IFS= read -r BARE_MAC; do
